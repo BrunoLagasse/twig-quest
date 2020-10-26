@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}PRODUCTS{% endblock %}
+
+{% block content %}
+    <h1>Twig quest</h1>
+    <section class="container-fluid">
+        <h2>Products</h2>
+        <div class="row">
+            {% for product in products %}
+                <div class="col-4 col-sm-4 col-lg-4 col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p>{{ product }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}
